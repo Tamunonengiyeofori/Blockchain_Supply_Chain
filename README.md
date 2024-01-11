@@ -21,7 +21,7 @@ This Solidity smart contract is designed to create and manage entities on the bl
 The contract provides the following functionality:
 - Registration of farmers and processors with their respective details and Ethereum addresses.
 - Registration of crops by farmers, including the product details and cost.
-- Purchase of crops by processors from farmers, with ownership transfer and balance updates.
+- Purchase of crops by processors from farmers, with ownership transfer and balance updates for purchase costs.
 
 The Live test Links for the smart contract deployed on the Sepolia Eth network are shown below;
 - Deploy Smart Contract: https://sepolia.etherscan.io/tx/0x706f422e61240d65c30e6e8a0bb4c3d5b99563ff818a7fdff2cea7a364488e64
