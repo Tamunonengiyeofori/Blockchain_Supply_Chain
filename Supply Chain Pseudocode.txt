@@ -1,0 +1,57 @@
+
+
+Purchase Crop:
+ 
+Function purchaseCrop() with parameter _cropId:
+    Check if the caller is a registered processor 
+    Check that the crop is registered 
+    Ensure that the cash balance of the processor is greater than the cost of   the crop
+    Calculate the new balance of the processor after the purchase
+    Deduct the cost of the crop from the processor's cash balance
+    Add the cost of the crop to the balance of the farmer who owns the crop
+    Transfer ownership of the crop to the processor 
+    Emit an event to log the purchase of the crop
+
+Register Crop:
+
+Function registerCrop() with parameters _name, _description, _cost:
+    Check if the caller is a registered farmer 
+    If not registered farmer:
+	Throw an error
+    If registered farmer:
+    	Register a Crop with the provided details and the current timestamp
+    	Add the address of the farmer as the initial entry in the Crops’ ownership history 
+        Emit an event to log the registration of the new crop
+        Increment the cropCount by 1
+
+Regsiter Farmer and Processor:
+
+Function registerFarmer(), registerProcessor() with parameters _farmerName, _farmerLocation, _newAddress _cashbalance:
+    Check if the caller is the owner of the contract
+    Check if the farmer or Processor does not already exist
+    If the address exists:
+	Throw an error message
+    If it doesn't exist:
+    	Create a new Farmer or Processor with the provided details
+    	Add the new farmer to the mapping storage of farmers
+    	Mark the new farmer as registered in the registeredFarmers mapping 
+    	Emit an event to log the registration of the new farmer
+    	Increment the farmerCount by 1
+
+Check Crop Ownership:
+Function checkCropOwnership with parameter _cropId:
+    Ensure that the crop ID is valid and exists.
+    If the crop ID is valid:
+	return the owner of the crop
+    Otherwise, throw an error indicating that the crop ID is invalid
+
+Check Ownership History:
+
+Function viewOwnershipHistory() with parameter _cropId:
+    Check that the caller is a registered processor
+    Check that the crop ID is valid 
+    If the caller is a registered processor and the crop ID is valid, return the ownership history of the crop 
+    Otherwise, throw an error indicating that only processors can view the crop history or that the crop ID is invalid
+
+
+
