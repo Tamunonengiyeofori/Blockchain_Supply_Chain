@@ -7,7 +7,7 @@ This Solidity smart contract is designed to create and manage entities on the bl
 - The contract has a `supplyChain` name and is written in Solidity version 0.8.11.
 - It includes the necessary state variables, data structures, mappings, and events to manage the registration and ownership of farmers, processors, and crops.
 - The contract owner is set to the account that deploys the smart contract.
-- Events are used to log function calls and allow subscription from the user end of the blockchain.
+- Events are used to log function calls and allow subscriptions from the user end of the blockchain.
 
 ## Entities and Data Structures
 
@@ -24,7 +24,7 @@ The contract provides the following functionality:
 - Purchase of crops by processors from farmers, with ownership transfer and balance updates for crop purchase costs.
 
 The Live test Links for the smart contract deployed on the Sepolia Eth network are shown below;
-- Deploy Smart Contract: https://sepolia.etherscan.io/tx/0x706f422e61240d65c30e6e8a0bb4c3d5b99563ff818a7fdff2cea7a364488e64
+- Deploy Smart Contract: https://sepolia.etherscan.io/tx/0xe91092420d82a2cd1f3ec47701e06154142e2cc3dcb1c56eb5a299a36490eeec
 - Farmer Registration: https://sepolia.etherscan.io/tx/0x339ddb37054f01780d78c5c1e43fa741943f0bd2b07a5b27c0201437ec62f0b8
 - Duplicate Registration Failed: https://sepolia.etherscan.io/tx/0xe9a561d11b493f355a6643d712c8470b10324d2a04832fe27e0398798e4576d8
 - Processor Registration: https://sepolia.etherscan.io/tx/0xb5505e75a1f82d1afae739c9db122f48c048114b6cd4d193117be25816967048
